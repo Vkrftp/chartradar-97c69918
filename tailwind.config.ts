@@ -22,15 +22,35 @@ export default {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "#141413",
-        foreground: "#FAFAF8",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#8989DE",
-          foreground: "#FAFAF8",
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "#3A3935",
-          foreground: "#FAFAF8",
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
         },
         success: {
           DEFAULT: "#7EBF8E",
@@ -38,14 +58,6 @@ export default {
         },
         warning: {
           DEFAULT: "#D2886F",
-          foreground: "#FAFAF8",
-        },
-        muted: {
-          DEFAULT: "#605F5B",
-          foreground: "#E6E4DD",
-        },
-        accent: {
-          DEFAULT: "#8989DE",
           foreground: "#FAFAF8",
         },
       },
