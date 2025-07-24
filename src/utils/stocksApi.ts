@@ -83,12 +83,12 @@ const mockPatterns = [
 ];
 
 const mockChartData = [
-  { date: '2024-01-10', open: 2420, high: 2445, low: 2415, close: 2440, volume: 1200000 },
-  { date: '2024-01-11', open: 2440, high: 2455, low: 2435, close: 2450, volume: 1100000 },
-  { date: '2024-01-12', open: 2450, high: 2470, low: 2445, close: 2465, volume: 1300000 },
-  { date: '2024-01-13', open: 2465, high: 2480, low: 2460, close: 2475, volume: 1150000 },
-  { date: '2024-01-14', open: 2475, high: 2490, low: 2470, close: 2485, volume: 1250000 },
-  { date: '2024-01-15', open: 2485, high: 2500, low: 2480, close: 2495, volume: 1400000 }
+  { id: null, symbol: "RELIANCE", date: '2025-07-10', open: 2420, high: 2445, low: 2415, close: 2440, volume: 1200, prev_close: 2418, avg_price: 2430, pattern_value: 0, matched_patterns: "[]" },
+  { id: null, symbol: "RELIANCE", date: '2025-07-11', open: 2440, high: 2455, low: 2435, close: 2450, volume: 1100, prev_close: 2440, avg_price: 2445, pattern_value: 0, matched_patterns: "[]" },
+  { id: null, symbol: "RELIANCE", date: '2025-07-12', open: 2450, high: 2470, low: 2445, close: 2465, volume: 1300, prev_close: 2450, avg_price: 2457, pattern_value: 0, matched_patterns: "[]" },
+  { id: null, symbol: "RELIANCE", date: '2025-07-13', open: 2465, high: 2480, low: 2460, close: 2475, volume: 1150, prev_close: 2465, avg_price: 2470, pattern_value: 0, matched_patterns: "[]" },
+  { id: null, symbol: "RELIANCE", date: '2025-07-14', open: 2475, high: 2490, low: 2470, close: 2485, volume: 1250, prev_close: 2475, avg_price: 2480, pattern_value: 0, matched_patterns: "[]" },
+  { id: null, symbol: "RELIANCE", date: '2025-07-15', open: 2485, high: 2500, low: 2480, close: 2495, volume: 1400, prev_close: 2485, avg_price: 2490, pattern_value: 85, matched_patterns: "['BullishEngulfing']" }
 ];
 
 export const fetchPatterns = async (page: number) => {
