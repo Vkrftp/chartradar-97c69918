@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { createChart, ColorType } from 'lightweight-charts';
+import { createChart } from 'lightweight-charts';
 import { fetchChartData } from '@/utils/stocksApi';
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -81,22 +81,47 @@ const Chart: React.FC<ChartProps> = ({ symbol, onClose }) => {
       },
     });
 
-    const candlestickSeries = (chart as any).addCandlestickSeries({
-      upColor: '#10B981',
-      downColor: '#EF4444',
-      borderDownColor: '#EF4444',
-      borderUpColor: '#10B981',
-      wickDownColor: '#EF4444',
-      wickUpColor: '#10B981',
-    });
+    try {
+      // Check if the method exists before calling it
+      if (typeof chart.addCandlestickSeries === 'function') {
+        const candlestickSeries = chart.addCandlestickSeries({
+          upColor: '#10B981',
+          downColor: '#EF4444',
+          borderDownColor: '#EF4444',
+          borderUpColor: '#10B981',
+          wickDownColor: '#EF4444',
+          wickUpColor: '#10B981',
+        });
 
-    candlestickSeries.setData(chartData);
+        candlestickSeries.setData(chartData);
+        
+        // Fit content to show all data
+        chart.timeScale().fitContent();
 
-    // Fit content to show all data
-    chart.timeScale().fitContent();
+        chartRef.current = chart;
+        seriesRef.current = candlestickSeries;
+      } else {
+        throw new Error('addCandlestickSeries method not available');
+      }
+    } catch (error) {
+      console.error('Error creating candlestick series:', error);
+      // Fallback: create a line series instead
+      const lineSeries = chart.addLineSeries({
+        color: '#10B981',
+        lineWidth: 2,
+      });
+      
+      const lineData = chartData.map(item => ({
+        time: item.time,
+        value: item.close
+      }));
+      
+      lineSeries.setData(lineData);
+      chart.timeScale().fitContent();
 
-    chartRef.current = chart;
-    seriesRef.current = candlestickSeries;
+      chartRef.current = chart;
+      seriesRef.current = lineSeries;
+    }
 
     // Handle resize
     const handleResize = () => {
