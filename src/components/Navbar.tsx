@@ -71,11 +71,27 @@ const Navbar = () => {
                 <NavigationMenuTrigger className="bg-transparent hover:bg-accent/10">
                   Future
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-background border border-border p-4 min-w-[400px]">
-                  <div className="space-y-3">
-                    <div className="text-sm font-medium">Futures Trading</div>
-                    <div className="text-sm text-muted-foreground">
-                      Access advanced futures trading tools and real-time market data
+                <NavigationMenuContent className="bg-background border border-border p-6 min-w-[500px]">
+                  <div className="space-y-4">
+                    <div className="text-lg font-semibold text-primary">Futures Trading</div>
+                    <div className="space-y-3">
+                      <div className="text-sm text-muted-foreground">
+                        Access advanced futures trading tools and real-time market data with comprehensive analysis features.
+                      </div>
+                      <ul className="space-y-2 text-sm">
+                        <li className="flex items-center gap-2">
+                          <TrendingUp className="w-4 h-4 text-primary" />
+                          <span>Real-time futures price tracking</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <BarChart3 className="w-4 h-4 text-primary" />
+                          <span>Advanced technical analysis tools</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <Target className="w-4 h-4 text-primary" />
+                          <span>Risk management calculators</span>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </NavigationMenuContent>
@@ -85,11 +101,27 @@ const Navbar = () => {
                 <NavigationMenuTrigger className="bg-transparent hover:bg-accent/10">
                   Options
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-background border border-border p-4 min-w-[400px]">
-                  <div className="space-y-3">
-                    <div className="text-sm font-medium">Options Trading</div>
-                    <div className="text-sm text-muted-foreground">
-                      Comprehensive options analysis and trading strategies
+                <NavigationMenuContent className="bg-background border border-border p-6 min-w-[500px]">
+                  <div className="space-y-4">
+                    <div className="text-lg font-semibold text-primary">Options Trading</div>
+                    <div className="space-y-3">
+                      <div className="text-sm text-muted-foreground">
+                        Comprehensive options analysis and trading strategies with advanced Greeks calculations.
+                      </div>
+                      <ul className="space-y-2 text-sm">
+                        <li className="flex items-center gap-2">
+                          <Target className="w-4 h-4 text-primary" />
+                          <span>Options chain analysis</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <BarChart3 className="w-4 h-4 text-primary" />
+                          <span>Volatility surface mapping</span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <Shield className="w-4 h-4 text-primary" />
+                          <span>Greeks monitoring (Delta, Gamma, Theta, Vega)</span>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </NavigationMenuContent>
@@ -127,11 +159,37 @@ const Navbar = () => {
                 <NavigationMenuTrigger className="bg-transparent hover:bg-accent/10">
                   About
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-background border border-border p-4 min-w-[400px]">
-                  <div className="space-y-3">
-                    <div className="text-sm font-medium">About CryptoRadar</div>
-                    <div className="text-sm text-muted-foreground">
-                      Learn more about our platform and trading tools
+                <NavigationMenuContent className="bg-background border border-border p-6 min-w-[600px]">
+                  <div className="space-y-6">
+                    <div>
+                      <div className="text-lg font-semibold text-primary mb-2">About CryptoRadar</div>
+                      <div className="text-sm text-muted-foreground">
+                        A comprehensive trading platform for stocks and cryptocurrency analysis with advanced pattern recognition and real-time market data.
+                      </div>
+                    </div>
+                    
+                    <div className="border-t border-border pt-4">
+                      <div className="text-sm font-medium mb-3 text-primary">Development Team</div>
+                      <div className="text-xs text-muted-foreground mb-3">
+                        This application was developed by talented software developers graduated with B.Tech Computer Science from SRM University:
+                      </div>
+                      <div className="grid grid-cols-1 gap-2">
+                        <div className="flex items-center gap-2">
+                          <User className="w-4 h-4 text-primary" />
+                          <span className="text-sm font-medium">VINOD SINGH</span>
+                          <span className="text-xs text-muted-foreground">- Software Developer</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <User className="w-4 h-4 text-primary" />
+                          <span className="text-sm font-medium">VIPUL DHANKAR</span>
+                          <span className="text-xs text-muted-foreground">- Software Developer</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <User className="w-4 h-4 text-primary" />
+                          <span className="text-sm font-medium">VIKRAM SINHA</span>
+                          <span className="text-xs text-muted-foreground">- Software Developer</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </NavigationMenuContent>
