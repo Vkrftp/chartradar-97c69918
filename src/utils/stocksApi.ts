@@ -137,13 +137,15 @@ export const fetchPatterns = async (page: number) => {
 export const fetchChartData = async (symbol: string) => {
   try {
     const response = await fetch(
-      `http://localhost:3000/api/chart/${symbol}`,
+      `https://modern-stock-api-9dd7c6923f13.herokuapp.com/stock/${symbol.toLowerCase()}`,
       {
         method: 'GET',
         headers: {
           'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        }
+          'Content-Type': 'application/json',
+          'x-api-key': '973827821435462'
+        },
+        mode: 'cors'
       }
     );
 
@@ -154,7 +156,8 @@ export const fetchChartData = async (symbol: string) => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.warn('Local API fetch failed, using mock data:', error);
-    return mockChartData;
+    console.warn('API fetch failed:', error);
+    return []; // fallback
   }
 };
+
